@@ -13,7 +13,7 @@ for (int i = 0; i < a.GetLength(0); i++)
     Console.WriteLine();
 } */
 
-//Задача 51: Задать двумерный массив следующим правилом: Aₘₙ = m+n.
+/* //Задача 51: Задать двумерный массив следующим правилом: Aₘₙ = m+n.
 
 int[,] a = new int[5, 6];
 for (int i = 0; i < a.GetLength(0); i++)
@@ -24,4 +24,55 @@ for (int i = 0; i < a.GetLength(0); i++)
         Console.Write($" {a[i,j]}");
     }
     Console.WriteLine();
+} */
+
+//Задача 53: В двумерном массиве показать позиции числа, заданного пользователем
+
+int[,]myArr = new int[4, 5];
+for (int i = 0; i < myArr.GetLength(0); i++)
+{
+    for (int j = 0; j < myArr.GetLength(1); j++)
+    {
+        myArr[i,j]=new Random().Next(10,99);
+        Console.Write($" {myArr[i,j]}");
+    }
+    Console.WriteLine();
+} 
+Console.WriteLine("Введите искомое число");
+int x=int.Parse(Console.ReadLine());
+
+for (int i = 0; i < myArr.GetLength(0); i++)
+{
+    for (int j = 0; j < myArr.GetLength(1); j++)
+    {
+        if(myArr[i,j]==x)
+        {
+            Console.WriteLine($"В массиве присутствует искомое число, индекс: "+i+";"+j); 
+        }
+    }
+        
+} 
+ 
+
+/* //Задача 55: Дан целочисленный массив. Найти среднее арифметическое каждого из столбцов.
+
+int[,]myArr = new int[3, 4];
+int x=0;
+for (int i = 0; i < myArr.GetLength(0); i++)
+{
+    for (int j = 0; j < myArr.GetLength(1); j++)
+    {
+        myArr[i,j]=new Random().Next(1,100);
+        Console.Write($" {myArr[i,j]}");
+    }
+    Console.WriteLine();
 }
+for (int i = 0; i < myArr.GetLength(1) ; i++)
+{
+    for (int j = 0; j < myArr.GetLength(0); j++)
+    {
+        x+=myArr[j,i];
+    }
+    Console.WriteLine((double)x/myArr.GetLength(0));
+} */
+
